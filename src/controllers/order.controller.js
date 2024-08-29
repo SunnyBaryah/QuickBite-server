@@ -31,7 +31,7 @@ const saveOrder = asyncHandler(async (req, res, next) => {
     new ApiResponse(
       200,
       {
-        paymentLink: `upi://pay?pa=9667210886@ibl&tn='OTP:${newOrder.otp}'&pn=SnapMeal&cu=INR&am=${amount}`,
+        paymentLink: `upi://pay?pa=9667210886@ptsbi&tn='OTP:${newOrder.otp}'&pn=Nipun&cu=INR&am=${amount}`,
       },
       "Order Received"
     )
