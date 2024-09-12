@@ -28,9 +28,8 @@ const addMenu = asyncHandler(async (req, res, next) => {
 });
 
 const updateMenu = asyncHandler(async (req, res, next) => {
-  const payload = req.body;
-  const id = req.body._id;
-
+  const payload = req.body.data;
+  const id = payload._id;
   const data = await Menu.findByIdAndUpdate({ _id: id }, payload, {
     new: true,
   });
